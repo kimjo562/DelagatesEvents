@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30E5CDE7-AD97-4B51-9399-DAC12827525C}</ProjectGuid>
+    <ProjectGuid>{A7CE43D4-8608-49FB-93FC-A0D304B20E1C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DelagatesEvents</RootNamespace>
-    <AssemblyName>DelagatesEvents</AssemblyName>
+    <RootNamespace>Keyboard</RootNamespace>
+    <AssemblyName>Keyboard</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayList.cs" />
-    <Compile Include="EventListener.cs" />
-    <Compile Include="KeyboardHandling.cs" />
-    <Compile Include="KeyInput.cs" />
-    <Compile Include="ListWithChangedEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ConsoleKeyEventPublisher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

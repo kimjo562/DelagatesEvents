@@ -9,10 +9,6 @@ namespace DelagatesEvents
     public delegate void ChangedEventHandler(object sender, EventArgs e);
     class ListWithChangedEvent : ArrayList
     {
-        public static object newArray;
-        public object oldArray;
-        int arraySize = 0;
-
         public ChangedEventHandler Changed;
 
         protected virtual void OnChanged(EventArgs e)
