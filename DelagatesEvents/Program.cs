@@ -8,16 +8,6 @@ namespace DelagatesEvents
 {
     class Program
     {
-        static bool KeyboardUpdate = false;
-
-        static void ListenforQuit(char key)
-        {
-            if (key == ' ')
-            {
-                KeyboardUpdate = true;
-            }
-        }
-
         static void Main(string[] args)
         {
             // Create a new list
@@ -30,16 +20,7 @@ namespace DelagatesEvents
             list.Add("hello");          // Everytime list is changed, print Notfication.    From: *Blank* to hello (Notify Change)
             list.Add("world");          // From: hello to world     (Notify Change)
             list.Clear();               // From: world to *Blank*   (Notify Change)
-            listener.Detatch();
-
-
-            ConsoleKeyEventPublisher consoleKeyEventPublisher = new ConsoleKeyEventPublisher();
-            consoleKeyEventPublisher.Subscribe(ListenforQuit);
-
-            while (KeyboardUpdate == false)
-            {
-                consoleKeyEventPublisher.Update();
-            }
+            listener.Detatch();     
 
         }
     }
