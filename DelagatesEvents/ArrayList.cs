@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DelagatesEvents
+namespace FizzBuzz2
 {
     class ArrayList
     {
@@ -16,7 +16,7 @@ namespace DelagatesEvents
         }
         public virtual void Add(object value)
         {
-            // Create a new array if Length +1
+            // Create a new array if Length + 1
             object[] newList = new object[_list.Length + 1];
             // Put the values of the old array into the new one
             for (int i = 0; i < _list.Length; i++)
@@ -27,17 +27,43 @@ namespace DelagatesEvents
             newList[newList.Length - 1] = value;
             // Sets the current array to the new array
             _list = newList;
+
+
+        }
+
+        public virtual void Remove(int index)
+        {
+            // Create a new array if Length - 1
+            object[] newList = new object[_list.Length - 1];
+            int noStack = 0;
+            // Put the values of the old array into the new array
+            for (int i = 0; i < _list.Length; i++)
+            {
+                if (i != index)
+                {
+                    newList[noStack] = _list[i];
+                    noStack++;
+                }
+
+            }
+            //Set the current array to the new array
+            _list = newList;
+
         }
 
         public virtual void Clear()
         {
-            for (int i =0; i< _list.Length; i++)
+            _list = new object[0];
+
+        }
+
+        public virtual void PrintList()
+        {
+            foreach (object i in _list)
             {
-                // Set the current array to a new empty array
-                _list[i] = null;
-
+                Console.Write(i + " ");
             }
-
+            Console.WriteLine();
         }
 
         public virtual object this[int index]
